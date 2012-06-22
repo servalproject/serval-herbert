@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/*
+ * Copyright (C) 2012 The Serval Project
+ *
+ * This file is part of the Serval Herbert Software
+ *
+ * Serval Herbert Software is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This source code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this source code; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+-->
+<resources>
+    
+    <!-- main activity strings -->
+    <string name="main_activity_ui_lbl_info">The Serval Herbet application is designed as a proof of concept to show integration with a hardware device to simplify making a call</string>
+    
+    <string name="main_activity_ui_btn_settings">Settings</string>
+    <string name="main_activity_ui_btn_close">Close</string>
+    
+    <string name="main_activity_ui_dialog_no_red_phone_number">There is no phone number configured for the red button</string>
+    <string name="main_activity_ui_dialog_no_green_phone_number">There is no phone number configured for the green button</string>
+    <string name="main_activity_ui_dialog_no_phone_numbers">There are no phone numbers configured for either button</string>
+    
+    <!-- settings and preferences -->
+    <string name="preferences_title">Serval Herber Preferences</string>
+    
+    <string name="preferences_red_button_title">Red Button Phone No.</string>
+    <string name="preferences_red_button_dialog_title">Red Button Phone No.</string>
+    <string name="preferences_red_button_summary">Phone no. to call when red button pressed</string>
+    
+    <string name="preferences_green_button_title">Green Button Phone No.</string>
+    <string name="preferences_green_button_dialog_title">Green Button Phone No.</string>
+    <string name="preferences_green_button_summary">Phone no. to call when green button pressed</string>
+
+    <!-- system level strings -->
+    <string name="system_application_name">Serval Herbet</string>
+
+</resources>

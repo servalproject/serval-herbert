@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/*
+ * Copyright (C) 2012 The Serval Project
+ *
+ * This file is part of the Serval Herbert Software
+ *
+ * Serval Herbert Software is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This source code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this source code; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.servalproject.herbert"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8" />
+    
+    <!-- needed for integration with ioio board -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
+    <!-- needed to make a phone call -->
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    
+    <!-- needed to put the phone into speakerphone mode -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"></uses-permission>
+    
+    <!-- start the core service automatically -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    
+    <!-- keep the service alive -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/system_application_name" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/system_application_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingsActivity"></activity>
+        <service 
+            android:name=".CoreService" 
+            android:exported="false" 
+            android:enabled="true"></service>
+        <receiver android:name=".SystemEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
